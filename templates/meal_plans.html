@@ -1,0 +1,15 @@
+
+
+<h1>Personalized Meal Plans</h1>
+<ul>
+{% for meal_plan in meal_plans %}
+<li>{{ meal_plan.name }}
+<form method="POST" action="/recipes">
+<input type="hidden" name="meal_plan_id" value="{{ meal_plan.id }}">
+<button type="submit">View Recipes</button>
+</form>
+</li>
+{% endfor %}
+</ul>
+
+
